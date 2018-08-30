@@ -1,0 +1,4 @@
+- service: app
+  command: true
+- service: app-with-dependent-healthcheck
+  command: true

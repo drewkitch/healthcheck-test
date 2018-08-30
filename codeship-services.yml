@@ -1,0 +1,13 @@
+app:
+  build:
+    dockerfile: Dockerfile
+app-with-dependent-healthcheck:
+  build:
+    dockerfile: Dockerfile
+  depends_on:
+    - db
+db:
+  build:
+    dockerfile: Dockerfile.db
+  environment:
+    - MYSQL_ALLOW_EMPTY_PASSWORD=true
